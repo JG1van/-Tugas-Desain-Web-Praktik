@@ -1,0 +1,106 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}
+
+/* Informasi */
+.informasi {
+    margin-top: 30px;
+    /* Mengatur margin*/
+    padding: 50px 0;
+    /* Mengatur padding */
+    max-width: 100vw;
+    /* Mengatur lebar maksimum 100% dari viewport */
+    height: auto;
+    /* Atur tinggi otomatis atau sesuai dengan konten */
+    background-color: var(--warna1);
+    /* Warna latar belakang */
+    display: flex;
+    /* Flexbox untuk tata letak */
+    justify-content: center;
+    /* Pusatkan konten secara horizontal */
+    align-items: center;
+    /* Pusatkan konten secara vertikal */
+}
+
+.informasi-content {
+    width: 100%;
+    /* Lebar 100% dari viewport */
+    text-align: center;
+    /* Pusatkan teks secara horizontal */
+}
+
+.informasi-content h1 {
+    font-size: 2.5em;
+    /* Ukuran font lebih besar untuk judul */
+    font-weight: bold;
+    /* Ketebalan font lebih tebal untuk judul */
+    margin-bottom: 20px;
+    /* Margin bawah  */
+    color: var(--warna3);
+    /* Warna teks  */
+}
+
+.informasi-content p {
+    font-size: 1.2em;
+    /* Ukuran font lebih besar untuk teks */
+    line-height: 1.6;
+    /* Jarak antar baris */
+    color: var(--warna2);
+    /* Warna teks  */
+}
+
+/*video*/
+.section-p1 {
+    padding: 30px 80px;
+    /* Mengatur padding */
+    background: var(--warna1);
+    /* Warna latar belakang */
+}
+
+#youtube {
+    text-align: center;
+    /* Pusatkan teks secara horizontal */
+    margin-bottom: 30px;
+    /* Margin bawah */
+}
+
+#youtube .video-container {
+    position: relative;
+    /* Posisi absolut */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    /* Tinggi 0 */
+    overflow: hidden;
+    /* Menyembunyikan konten yang melampaui batas */
+    max-width: 100%;
+    /* Lebar maksimum 100% */
+
+}
+
+#youtube .video-container iframe {
+    position: absolute;
+    /* Posisi absolut */
+    top: 0;
+    /* Atas */
+    left: 0;
+    /* Kiri */
+    width: 100%;
+    /* Lebar 100% */
+    height: 100%;
+    /* Tinggi 100% */
+    border: 0;
+    /* Menghilangkan border */
+}

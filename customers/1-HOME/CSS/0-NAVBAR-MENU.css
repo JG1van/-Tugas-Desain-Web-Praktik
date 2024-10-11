@@ -1,0 +1,35 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}
+
+.NAVBAR-MENU {
+    background-color: var(--warna1);
+    color: var(--warna2);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    color: var(--warna2);
+    text-decoration: none;
+    margin-left: 1rem;
+}

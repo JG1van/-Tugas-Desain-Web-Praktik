@@ -1,0 +1,301 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+}
+
+.PAKET-CAMPING {
+    padding: 50px 0;
+    /* Mengatur padding */
+    max-width: 100vw;
+    /* Mengatur lebar maksimum 100% dari viewport */
+    height: auto;
+    /* Atur tinggi otomatis atau sesuai dengan konten */
+    background-color: var(--warna1);
+    /* Warna latar belakang */
+}
+
+.PAKET-CAMPING h1 {
+    font-size: 2.5em;
+    /* Ukuran font lebih besar untuk judul */
+    font-weight: bold;
+    /* Ketebalan font lebih tebal untuk judul */
+    color: var(--warna3);
+    /* Warna teks */
+    text-align: center;
+    /* Pusatkan teks secara horizontal */
+}
+
+/* Bagian Paket Hover */
+.paket {
+    margin: 20px auto;
+    /* Mengatur margin otomatis */
+    padding: 20px;
+    /* Mengatur padding */
+    height: auto;
+    /* Mengatur tinggi otomatis atau sesuai dengan konten */
+    width: 80vw;
+    /* Mengatur lebar 80% dari viewport */
+    background-color: var(--warna3);
+    /* Warna latar belakang */
+    display: grid;
+    /* Menggunakan grid untuk tata letak */
+    grid-template-columns: repeat(2, 1fr);
+    /* Dua kolom dengan lebar 1fr */
+    grid-template-rows: repeat(2, 1fr);
+    /* Dua baris dengan tinggi 1fr */
+    gap: 10px;
+    /* Jarak antar item */
+    justify-content: center;
+    /* Pusatkan konten secara horizontal */
+    align-items: center;
+    /* Pusatkan konten secara vertikal */
+    color: var(--warna2);
+    /* Warna teks */
+}
+
+.paket-content {
+    width: 100%;
+    /* Lebar 100% dari konten */
+    max-width: 30rem;
+    /* Lebar maksimum */
+    aspect-ratio: 1 / 0.7;
+    /* Rasio lebar ke tinggi */
+    border-radius: 8px;
+    /* Sudut melengkung */
+    position: relative;
+    /* Posisi relatif untuk konten */
+    cursor: pointer;
+    /* Kursor berubah menjadi pointer saat dihover */
+    overflow: hidden;
+    /* Menyembunyikan konten yang melampaui batas */
+}
+
+.paket-content .image-box {
+    width: 100%;
+    /* Lebar 100% dari konten */
+    height: 100%;
+    /* Tinggi 100% dari konten */
+    border-radius: inherit;
+    /* Sudut melengkung */
+    overflow: hidden;
+    /* Menyembunyikan konten yang melampaui batas */
+}
+
+.paket-content .image-box img {
+    width: 100%;
+    /* Lebar 100% dari konten */
+    height: 100%;
+    /* Tinggi 100% dari konten */
+    object-fit: cover;
+    /* Menutupi seluruh area item tanpa mengubah rasio */
+    object-position: 50% 90%;
+    /* Posisi gambar */
+    border-radius: inherit;
+    /* Sudut melengkung */
+    transition: 0.5s ease-in-out;
+    /* Efek transisi */
+}
+
+.paket-content::after {
+    content: "";
+    /* Konten kosong */
+    position: absolute;
+    /* Posisi absolut */
+    inset: 0;
+    /* Menetapkan semua sisi (atas, kanan, bawah, kiri) ke 0 */
+    border: 2px solid white;
+    /* Garis putih */
+    border-radius: inherit;
+    /* Sudut melengkung */
+    opacity: 0;
+    /* Opasitas awal 0 */
+    transition: 0.4s ease-in-out;
+    /* Efek transisi */
+}
+
+.paket-content:hover img {
+    filter: grayscale(1) brightness(0.4);
+    /* Efek grayscale dan kecerahan */
+}
+
+.paket-content:hover::after {
+    opacity: 1;
+    /* Opasitas 1 saat dihover */
+    inset: 20px;
+    /* Jarak antar border */
+}
+
+/* Bagian konten yang muncul saat hover */
+.paket-content .content {
+    width: 80%;
+    /* Lebar 80% dari konten */
+    position: absolute;
+    /* Posisi absolut */
+    top: 50%;
+    /* 50% dari atas */
+    left: 50%;
+    /* 50% dari kiri */
+    transform: translate(-50%, -50%);
+    /* Pusatkan konten */
+    text-align: center;
+    /* Pusatkan teks secara horizontal */
+    transition: 0.5s ease-in-out;
+    /* Efek transisi */
+}
+
+.paket-content .content h2 {
+    font-size: 1.5rem;
+    /* Ukuran font */
+    margin-bottom: 12px;
+    /* Margin bawah */
+    opacity: 1;
+    /* Opasitas awal 1 */
+    transition: 0.3s ease-in-out;
+    /* Efek transisi */
+}
+
+.paket-content .content p {
+    font-size: 14px;
+    /* Ukuran font */
+    line-height: 1.5;
+    /* Jarak antar baris */
+    color: var(--warna2);
+    /* Warna teks */
+    transition: 0.3s ease-in-out;
+    /* Efek transisi */
+}
+
+/* Daftar fasilitas (ul) yang akan muncul saat hover */
+.paket-content .content ul {
+    /* Mengatur ul sebagai daftar */
+    margin: 0;
+    /* Margin atas dan bawah 0 */
+    padding: 0;
+    /* Padding atas dan bawah 0 */
+    font-size: 14px;
+    /* Ukuran font */
+    color: var(--warna2);
+    /* Warna teks */
+    opacity: 0;
+    /* Opasitas awal 0 */
+    max-height: 0;
+    /* Tinggi maksimum 0 */
+    /* Pada awalnya disembunyikan */
+    overflow: hidden;
+    /* Menyembunyikan konten yang melampaui batas */
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    /* Efek transisi */
+    text-align: left;
+    /* Pusatkan teks secara horizontal */
+}
+
+/* Hover state untuk menampilkan ul */
+.paket-content:hover .content ul {
+    opacity: 1;
+    /* Opasitas 1 saat dihover */
+    max-height: 500px;
+    /* Tinggi maksimum 500px */
+    /* Maksimalkan tinggi untuk menampilkan seluruh daftar */
+}
+
+.paket-content:hover .content h2 {
+    transform: scale(1);
+    /* Skala 1 saat dihover */
+    opacity: 1;
+    /* Opasitas 1 saat dihover */
+}
+
+.paket-content:hover .content p,
+.paket-content:hover .content h1 {
+    opacity: 1;
+    /* Opasitas 1 saat dihover */
+    transform: translateY(0);
+    /* Geser konten ke posisi awal */
+}
+
+/* Atur posisi tombol dan pastikan z-index cukup tinggi */
+.paket-content .content .button {
+    margin-top: 20px;
+    /* Jarak atas */
+    text-align: center;
+    /* Pusatkan teks */
+    opacity: 0;
+    /* Tombol awalnya tidak terlihat */
+    transition: 0.5s ease-in-out;
+    /* Efek transisi */
+    z-index: 2;
+    /* Tombol berada di atas elemen lain */
+    position: relative;
+    /* Memastikan tombol di atas elemen lainnya */
+}
+
+/* Atur gaya tombol */
+.paket-content .content .button a {
+    padding: 10px;
+    border: none;
+    /* Menghilangkan border tombol */
+    background-color: var(--warna4);
+    /* Warna latar belakang tombol */
+    font-weight: 500;
+    /* Ketebalan font tombol */
+    cursor: pointer;
+    /* Kursor berubah menjadi pointer saat dihover */
+    transition: 0.5s;
+    /* Transisi untuk efek hover */
+    letter-spacing: 2px;
+    /* Jarak antar huruf */
+    border-radius: 0.5rem;
+    /* Membuat sudut  */
+    color: var(--warna2);
+    /* Warna teks  */
+    font-size: 1rem;
+    /* Ukuran font */
+    font-weight: bold;
+    /* Ketebalan font */
+    text-align: center;
+    /* Pusatkan teks secara horizontal */
+    text-decoration: none;
+    /* Menghilangkan garis bawah */
+}
+
+/* Efek hover untuk tombol */
+.paket-content .content .button a:hover {
+    letter-spacing: 3px;
+    /* Jarak antar huruf bertambah saat dihover */
+    background-color: var(--warna5);
+    /* Warna latar belakang tombol */
+    border-radius: 5rem;
+    /* Membuat sudut  */
+}
+
+/* Tampilkan tombol saat gambar di-hover */
+.paket-content:hover .content .button {
+    opacity: 1;
+    /* Tampilkan tombol saat hover */
+    z-index: 2;
+    /* Pastikan tombol tetap di atas */
+    position: relative;
+    /* Memastikan tombol diatur posisinya di atas */
+}
+
+/* Atur gambar agar tidak mengganggu interaksi saat hover */
+.paket-content:hover img {
+    filter: grayscale(1) brightness(0.4);
+    pointer-events: none;
+    /* Menonaktifkan interaksi pada gambar saat di-hover */
+}
+
+.paket-content:hover::after {
+    pointer-events: none;
+    /* Pastikan border tidak mengganggu klik */
+}

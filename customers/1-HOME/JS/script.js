@@ -1,52 +1,42 @@
-// Mendapatkan elemen tombol next dan prev
-let nextBtn = document.querySelector(".next");
-let prevBtn = document.querySelector(".prev");
-
 // Mendapatkan elemen slider dan daftar gambar di dalamnya
-let slider = document.querySelector(".slider");
-let sliderList = slider.querySelector(".list");
+let slider = document.querySelector(".slider"); // Elemen utama slider
+let sliderList = slider.querySelector(".list"); // Daftar gambar/item di dalam slider
 
-// Fungsi untuk tombol next
-nextBtn.onclick = function () {
-  moveSlider("next");
-};
-
-// Fungsi untuk tombol prev
-prevBtn.onclick = function () {
-  moveSlider("prev");
-};
-
-// Slide otomatis
+// Slide otomatis: Mengatur interval untuk memindahkan slider setiap 5 detik
 let slideInterval = setInterval(function () {
-  moveSlider("next");
+  moveSlider("next"); // Pindahkan slider ke gambar berikutnya setiap kali interval berakhir
 }, 5000); // 5000 milidetik = 5 detik
 
+// Fungsi untuk menggerakkan slider
 function moveSlider(direction) {
-  // Mendapatkan daftar gambar di dalam slider
+  // Mendapatkan semua elemen gambar (item) dalam slider
   let sliderItems = sliderList.querySelectorAll(".item");
 
+  // Jika arah yang diinginkan adalah "next"
   if (direction === "next") {
-    // Memindahkan gambar pertama ke akhir
+    // Memindahkan gambar pertama ke akhir dari daftar gambar
     sliderList.appendChild(sliderItems[0]);
-    // Menambahkan kelas 'next' untuk animasi
+    // Menambahkan kelas 'next' untuk memicu animasi 'next'
     slider.classList.add("next");
-  } else {
-    // Memindahkan gambar terakhir ke awal
+  }
+  // Jika arah yang diinginkan adalah "prev"
+  else {
+    // Memindahkan gambar terakhir ke awal dari daftar gambar
     sliderList.prepend(sliderItems[sliderItems.length - 1]);
-    // Menambahkan kelas 'prev' untuk animasi
+    // Menambahkan kelas 'prev' untuk memicu animasi 'prev'
     slider.classList.add("prev");
   }
 
-  // Menghapus kelas animasi setelah animasi selesai
+  // Setelah animasi selesai, hapus kelas 'next' atau 'prev' agar siap untuk animasi berikutnya
   slider.addEventListener(
-    "animationend",
+    "animationend", // Peristiwa yang terjadi ketika animasi selesai
     function () {
       if (direction === "next") {
-        slider.classList.remove("next");
+        slider.classList.remove("next"); // Hapus kelas 'next' setelah animasi 'next' selesai
       } else {
-        slider.classList.remove("prev");
+        slider.classList.remove("prev"); // Hapus kelas 'prev' setelah animasi 'prev' selesai
       }
     },
-    { once: true } // Hapus event listener setelah dipanggil sekali
+    { once: true } // Event listener ini hanya aktif sekali, lalu dihapus otomatis setelah dipanggil
   );
 }

@@ -17,23 +17,7 @@
     /* Warna hover button latar belakang  */
 }
 
-* {
-    margin: 0;
-    /* Margin */
-    padding: 0;
-    /* Padding */
-    box-sizing: border-box;
-    /* Mengatur box-sizing */
-}
-
-body {
-    font-family: Poppins;
-    /* Menggunakan font Poppins */
-}
-
-
 /* slider section */
-
 .slider {
     padding: 50px 0;
     /* Mengatur padding */
@@ -67,30 +51,46 @@ body {
     /* Menutupi seluruh area item tanpa mengubah rasio */
 }
 
+.slider .list .item .content .text {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(5px);
+    /* Efek blur pada latar belakang */
+    -webkit-backdrop-filter: blur(10px);
+    /* Versi untuk browser Webkit */
+    border-radius: 15px;
+    /* Membuat sudut melengkung pada background */
+    width: 80%;
+    /* Lebar 80% dari item */
+    height: 300px;
+}
+
 .slider .list .item .content {
     position: absolute;
-    /* Posisi absolut untuk konten di dalam item */
-    top: 30%;
-    /* 20% dari atas item */
-    width: 1140px;
-    /* Lebar konten */
-    max-width: 80%;
-    /* Lebar maksimum 80% dari item */
-    left: 50%;
-    /* 50% dari kiri item */
-    transform: translateX(-50%);
-    /* Mengeser konten ke tengah horizontal */
-    padding-right: 30%;
-    /* Padding kanan */
-    box-sizing: border-box;
-    /* Menyertakan padding dan border dalam lebar */
-    color: var(--warna2);
-    /* Warna teks */
+    inset: 0;
+    /* Atur inset ke 0 agar elemen content memenuhi seluruh item */
+    display: flex;
+    /* Gunakan flexbox */
+    flex-direction: column;
+    /* Atur arah flex ke kolom untuk mengatur elemen di bawah satu sama lain */
+    align-items: center;
+    /* Pusatkan elemen secara horizontal */
+    justify-content: center;
+    /* Pusatkan elemen secara vertikal */
+    text-align: center;
+    /* Pusatkan teks di dalam konten */
+    color: var(--warna6);
     text-shadow: 0 5px 10px #000;
-    /* Bayangan teks */
     font-size: 2rem;
-    /* Ukuran font */
+    padding: 20px;
+    /* Bisa diatur untuk memberi sedikit ruang */
+    box-sizing: border-box;
+    /* Ini akan memastikan bahwa padding tidak mempengaruhi lebar total elemen */
+
 }
+
+
 
 .slider .list .item .content .title {
     font-size: 5rem;
@@ -101,49 +101,38 @@ body {
     /* Tinggi garis */
     color: var(--warna3);
     /* Warna teks  */
+
 }
 
 .slider .list .item .button {
-    display: grid;
-    /* Menggunakan grid untuk tata letak tombol */
-    grid-template-columns: repeat(2,
-            130px);
-    /* Dua kolom dengan lebar 130px */
-    grid-template-rows: 40px;
-    /* Satu baris dengan tinggi 40px */
-    gap: 5px;
-    /* Jarak antar tombol */
+    display: flex;
+    /* Gunakan Flexbox */
+    justify-content: center;
+    /* Pusatkan secara horizontal */
+    align-items: center;
+    /* Pusatkan secara vertikal */
     margin-top: 20px;
-    /* Margin atas */
 }
 
 .slider .list .item .button a {
-    padding: 10px;
+    padding: 10px 20px;
+    /* Tambahkan padding untuk memberi lebih banyak ruang pada tombol */
     border: none;
-    /* Menghilangkan border tombol */
     background-color: var(--warna4);
-    /* Warna latar belakang tombol */
     font-weight: 500;
-    /* Ketebalan font tombol */
     cursor: pointer;
-    /* Kursor berubah menjadi pointer saat dihover */
     transition: 0.5s;
-    /* Transisi untuk efek hover */
     letter-spacing: 2px;
-    /* Jarak antar huruf */
     border-radius: 0.5rem;
-    /* Membuat sudut  */
     color: var(--warna2);
-    /* Warna teks  */
     font-size: 1rem;
-    /* Ukuran font */
     font-weight: bold;
-    /* Ketebalan font */
     text-align: center;
-    /* Pusatkan teks secara horizontal */
     text-decoration: none;
-    /* Menghilangkan garis bawah */
+    display: inline-block;
+    /* Pastikan tombol berfungsi sebagai elemen inline */
 }
+
 
 
 
@@ -156,54 +145,6 @@ body {
     /* Membuat sudut  */
 }
 
-
-/* nextPrevArrows Section */
-.nextPrevArrows {
-    position: absolute;
-    /* Posisi absolut untuk tombol navigasi */
-    top: 80%;
-    /* 80% dari atas slider */
-    right: 52%;
-    /* 52% dari kanan slider */
-    z-index: 100;
-    /* Z-index untuk mengatur lapisan */
-    width: 300px;
-    /* Lebar Kotak-luar tombol */
-    max-width: 30%;
-    /* Lebar maksimum 30% dari slider */
-    display: flex;
-    /* Flexbox untuk tata letak tombol */
-    gap: 10px;
-    /* Jarak antar tombol */
-    align-items: center;
-    /* Menyelaraskan tombol secara vertikal */
-}
-
-.nextPrevArrows button {
-    width: 40px;
-    /* Lebar tombol */
-    height: 40px;
-    /* Tinggi tombol */
-    border-radius: 50%;
-    /* Tombol bulat */
-    background-color: var(--warna4);
-    /* Warna latar belakang tombol */
-    border: none;
-    /* Menghilangkan border */
-    color: var(--warna2);
-    /* Warna teks  */
-    font-weight: bold;
-    /* Ketebalan font */
-    transition: 0.5s;
-    /* Transisi untuk efek hover */
-    cursor: pointer;
-    /* Kursor berubah menjadi pointer saat dihover */
-}
-
-.nextPrevArrows button:hover {
-    background-color: var(--warna1);
-    /* Warna latar belakang putih saat dihover */
-}
 
 /* Animation Part */
 .slider .list .item:nth-child(1) {
@@ -321,11 +262,6 @@ body {
     }
 }
 
-.slider.next .nextPrevArrows button,
-.slider.prev .nextPrevArrows button {
-    pointer-events: none;
-    /* Menonaktifkan pointer pada tombol navigasi */
-}
 
 .slider.prev .list .item:nth-child(2) .content .title,
 .slider.prev .list .item:nth-child(2) .content .description,

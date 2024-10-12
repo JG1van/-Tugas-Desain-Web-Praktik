@@ -17,6 +17,21 @@
     /* Warna hover button latar belakang  */
 }
 
+* {
+    margin: 0;
+    /* Margin */
+    padding: 0;
+    /* Padding */
+    box-sizing: border-box;
+    /* Mengatur box-sizing */
+    font-family: 'Times New Roman';
+}
+
+body {
+    font-family: Poppins;
+    /* Menggunakan font Poppins */
+}
+
 .NAVBAR-MENU {
     background-color: var(--warna1);
     color: var(--warna2);

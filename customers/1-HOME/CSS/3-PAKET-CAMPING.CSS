@@ -1,6 +1,8 @@
 /* Definisi warna yang digunakan */
 :root {
     /* Variabel warna */
+    --warna0: black;
+    /* Warna text */
     --warna1: #22303F;
     /* Warna latar belakang */
     --warna2: #E7E8E7;
@@ -11,6 +13,8 @@
     /* Warna button latar belakang */
     --warna5: #394A56;
     /* Warna hover button latar belakang  */
+    --warna6: white;
+    /* Warna hover button latar belakang  */
 }
 
 .PAKET-CAMPING {
@@ -20,7 +24,7 @@
     /* Mengatur lebar maksimum 100% dari viewport */
     height: auto;
     /* Atur tinggi otomatis atau sesuai dengan konten */
-    background-color: var(--warna1);
+    background-color: var(--warna6);
     /* Warna latar belakang */
 }
 
@@ -29,31 +33,40 @@
     /* Ukuran font lebih besar untuk judul */
     font-weight: bold;
     /* Ketebalan font lebih tebal untuk judul */
-    color: var(--warna3);
+    color: var(--warna0);
     /* Warna teks */
     text-align: center;
     /* Pusatkan teks secara horizontal */
 }
 
+.PAKET-CAMPING h3 {
+    margin: 20px 0;
+    padding-left: 200px;
+    font-size: 1.5em;
+    /* Ukuran font lebih besar untuk judul */
+    font-weight: bold;
+    /* Ketebalan font lebih tebal untuk judul */
+    color: var(--warna0);
+    /* Warna teks */
+}
+
 /* Bagian Paket Hover */
 .paket {
-    margin: 20px auto;
+    margin: -30px auto;
     /* Mengatur margin otomatis */
-    padding: 20px;
+    padding: 70px;
     /* Mengatur padding */
     height: auto;
     /* Mengatur tinggi otomatis atau sesuai dengan konten */
     width: 80vw;
     /* Mengatur lebar 80% dari viewport */
-    background-color: var(--warna3);
-    /* Warna latar belakang */
     display: grid;
     /* Menggunakan grid untuk tata letak */
     grid-template-columns: repeat(2, 1fr);
     /* Dua kolom dengan lebar 1fr */
     grid-template-rows: repeat(2, 1fr);
     /* Dua baris dengan tinggi 1fr */
-    gap: 10px;
+    gap: 50px;
     /* Jarak antar item */
     justify-content: center;
     /* Pusatkan konten secara horizontal */
@@ -70,7 +83,7 @@
     /* Lebar maksimum */
     aspect-ratio: 1 / 0.7;
     /* Rasio lebar ke tinggi */
-    border-radius: 8px;
+    border-radius: 1.5rem;
     /* Sudut melengkung */
     position: relative;
     /* Posisi relatif untuk konten */
@@ -154,7 +167,7 @@
 }
 
 .paket-content .content h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* Ukuran font */
     margin-bottom: 12px;
     /* Margin bawah */
@@ -225,7 +238,7 @@
 
 /* Atur posisi tombol dan pastikan z-index cukup tinggi */
 .paket-content .content .button {
-    margin-top: 20px;
+    margin-top: -10px;
     /* Jarak atas */
     text-align: center;
     /* Pusatkan teks */

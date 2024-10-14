@@ -19,9 +19,9 @@
 
 /* Gaya dasar FOOTER */
 .FOOTER {
-    padding: 50px;
-    /* Mengatur padding */
+    padding: 30px 50px 10px 50px;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.6);
+    /*bayangan*/
     display: flex;
     /* Mengatur FOOTER menggunakan flexbox */
     flex-wrap: wrap;
@@ -32,49 +32,60 @@
     /* Mengatur posisi relatif untuk elemen FOOTER */
     overflow: hidden;
     /* Menyembunyikan konten yang meluap di luar batas FOOTER */
-}
-
-.FOOTER::before {
-    content: "";
-    /* Menambahkan elemen kosong sebelum konten FOOTER */
-    position: absolute;
-    /* Memposisikan elemen secara absolut di dalam FOOTER */
-    inset: 0;
-    /* Mengatur elemen untuk menutupi seluruh area FOOTER */
-    z-index: -1;
-    /* Menempatkan elemen di atas konten lain */
     background-color: var(--warna1);
-    /* Warna latar belakang default */
-    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='bg'%3E%3Cstop offset='0%' style='stop-color:%23206485'%3E%3C/stop%3E%3Cstop offset='50%' style='stop-color:%23E7E8E7'%3E%3C/stop%3E%3Cstop offset='100%' style='stop-color:%23206485'%3E%3C/stop%3E%3C/linearGradient%3E%3Cpath id='wave' fill='url(%23bg)' d='M-363.852,12.189c0,2,236.988-31.997,505.475,0 s371.981,100.998,575.971,0s293.985-39.278,505.474,5.859 s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z'/%3E%3C/defs%3E%3Cg%3E%3Cuse xlink:href='%23wave' opacity='.3'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='10s' calcMode='spline' values='270 230; -334 180; 270 230' keyTimes='0; .5; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3Cuse xlink:href='%23wave' opacity='.6'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='8s' calcMode='spline' values='-270 230;243 220;-270 230' keyTimes='0; .6; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3Cuse xlink:href='%23wave' opacty='.9'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='6s' calcMode='spline' values='0 230;-140 200;0 230' keyTimes='0; .4; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3C/g%3E%3C/svg%3E");
-    /* background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='bg'%3E%3Cstop offset='0%' style='stop-color:%23E7E8E7'%3E%3C/stop%3E%3Cstop offset='50%' style='stop-color:%238FBFDA'%3E%3C/stop%3E%3Cstop offset='100%' style='stop-color:%23206485'%3E%3C/stop%3E%3C/linearGradient%3E%3Cpath id='wave' fill='url(%23bg)' d='M-363.852,502.589c0,0,236.988-41.997,505.475,0 s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z'/%3E%3C/defs%3E%3Cg%3E%3Cuse xlink:href='%23wave' opacity='.3'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='10s' calcMode='spline' values='270 230; -334 180; 270 230' keyTimes='0; .5; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3Cuse xlink:href='%23wave' opacity='.6'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='8s' calcMode='spline' values='-270 230;243 220;-270 230' keyTimes='0; .6; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3Cuse xlink:href='%23wave' opacty='.9'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='6s' calcMode='spline' values='0 230;-140 200;0 230' keyTimes='0; .4; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3C/g%3E%3C/svg%3E"); */
-    /* background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='bg'%3E%3Cstop offset='0%' style='stop-color:%23E7E8E7'%3E%3C/stop%3E%3Cstop offset='50%' style='stop-color:%238FBFDA'%3E%3C/stop%3E%3Cstop offset='100%' style='stop-color:%23206485'%3E%3C/stop%3E%3C/linearGradient%3E%3Cpath id='wave' fill='url(%23bg)' d='M-363.852,1004.767c0,0,236.988-125.991,505.475,0 s371.981,116.994,575.971,0 s293.985-117.834,505.474,17.577 s493.475,145.104,716.963-14.995 v1680.318 H-363.852 V1507.767z'/%3E%3C/defs%3E%3Cg%3E%3Cuse xlink:href='%23wave' opacity='.3'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='10s' calcMode='spline' values='270 230; -334 180; 270 230' keyTimes='0; .5; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3Cuse xlink:href='%23wave' opacity='.6'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='8s' calcMode='spline' values='-270 230;243 220;-270 230' keyTimes='0; .6; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3Cuse xlink:href='%23wave' opacity='.9'%3E%3CanimateTransform attributeName='transform' attributeType='XML' type='translate' dur='6s' calcMode='spline' values='0 230;-140 200;0 230' keyTimes='0; .4; 1' keySplines='0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0' repeatCount='indefinite' /%3E%3C/use%3E%3C/g%3E%3C/svg%3E"); */
-
-    /* Menambahkan gambar latar belakang SVG */
-    background-repeat: no-repeat;
-    /* Mencegah pengulangan gambar latar belakang */
-
+    /* Warna latar belakang */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23394a56' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23206485' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2349606f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23295f7b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%235a7688' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%232f5972' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%236b8ea3' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23345468' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%237da6be' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23374f5f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%238fbfda' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23394a56' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    /* Menyebabkan gambar latar belakang tidak bergerak saat di-scroll */
     background-size: cover;
-    /* Menutup seluruh area dengan gambar */
+    /* Mengatur ukuran gambar latar belakang */
+    transition: all 5s ease;
+    /* Transisi halus untuk perubahan posisi gambar */
+    color: var(--warna2);
+    /* Warna teks */
+}
+
+.FOOTER:hover {
+    background-color: var(--warna3);
+    /* Mengubah warna latar belakang saat di-hover */
+    color: var(--warna0);
+    /* Mengubah warna teks saat di-hover */
 
 }
 
+/* Gaya logo di dalam FOOTER */
+.FOOTER .logo {
+    margin-bottom: 90px;
+    /* Margin bawah untuk logo */
+}
+
+.FOOTER .Teras-Merapi {
+    width: 300px;
+    /* Lebar logo */
+}
 
 /* Tata letak kolom di dalam FOOTER */
-.FOOTER .col {
+.FOOTER .kotak {
     display: flex;
     /* Menggunakan flexbox untuk kolom */
     flex-direction: column;
     /* Menyusun item dalam kolom secara vertikal */
     align-items: flex-start;
     /* Menyusun item di awal kolom */
-    margin-bottom: 30px;
-    /* Margin bawah untuk setiap kolom */
+    justify-content: flex-end;
+    /* Menyusun item di akhir kolom */
+    align-items: center;
+    /* Menyusun item di akhir kolom */
+    margin-bottom: 20px;
+    /* Margin bawah untuk kolom */
 }
 
-/* Gaya logo di dalam FOOTER */
-.FOOTER .logo {
-    margin-bottom: 30px;
-    /* Margin bawah untuk logo */
+/* Gaya gambar di dalam kolom */
+.kotak img {
+    border-radius: 50%;
+    /* Membuat gambar berbentuk lingkaran */
+    position: relative;
+    /* Posisi relatif untuk gambar */
 }
 
 /* Gaya judul di dalam FOOTER */
@@ -103,24 +114,26 @@
     /* Ukuran font untuk tautan */
     text-decoration: none;
     /* Menghilangkan garis bawah pada tautan */
-    color: var(--warna0);
+    color: var(--warna2);
     /* Warna teks untuk tautan */
     margin-bottom: 10px;
     /* Margin bawah untuk tautan */
     position: relative;
     /* Posisi relatif untuk tautan */
+    transition: all 5s ease;
+    /* Transisi halus untuk perubahan posisi gambar */
 }
 
-/* Gaya gambar di dalam kolom */
-.col img {
-    border-radius: 50%;
-    /* Membuat gambar berbentuk lingkaran */
-    position: relative;
-    /* Posisi relatif untuk gambar */
+/* Mengubah warna tautan saat footer di-hover */
+.FOOTER:hover a {
+    color: var(--warna0);
+    /* Mengubah warna teks link saat footer di-hover */
 }
+
 
 /* Gaya ikon di dalam kolom */
-.col .icon {
-    font-size: 10px;
+.kotak .icon {
+    font-size: 20px;
     /* Ukuran font untuk ikon */
+
 }

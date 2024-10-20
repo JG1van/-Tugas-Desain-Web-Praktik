@@ -1,8 +1,10 @@
 /* Definisi warna yang digunakan */
 :root {
     /* Variabel warna */
+    --warna: white;
+    /* Warna */
     --warna0: black;
-    /* Warna text */
+    /* Warna  */
     --warna1: #22303F;
     /* Warna latar belakang */
     --warna2: #E7E8E7;
@@ -13,41 +15,33 @@
     /* Warna button latar belakang */
     --warna5: #394A56;
     /* Warna hover button latar belakang  */
-    --warna6: white;
-    /* Warna hover button latar belakang  */
+
 }
 
-* {
-    margin: 0;
-    /* Margin */
-    padding: 0;
-    /* Padding */
-    box-sizing: border-box;
-    /* Mengatur box-sizing */
-    font-family: 'Times New Roman';
+
+
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("../GAMBAR/custom.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
-    font-family: Poppins;
-    /* Menggunakan font Poppins */
+.judul {
+    font-family: "CustomFont", sans-serif;
 }
 
-.NAVBAR-MENU {
-    background-color: var(--warna1);
-    color: var(--warna2);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.reservasi-btn {
+    border: 2px solid white;
+    color: white;
+    /* Pastikan warna teks default putih */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav a {
-    color: var(--warna2);
-    text-decoration: none;
-    margin-left: 1rem;
+.reservasi-btn:hover {
+    background-color: white;
+    color: black !important;
+    /* Tambahkan !important agar warna teks menjadi hitam saat hover */
+    border: 2px solid white;
 }

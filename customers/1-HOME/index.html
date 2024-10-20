@@ -3,100 +3,331 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="STYLE-HOME.CSS" />
-    <title>Document</title>
-    <!-- Menyertakan FontAwesome CSS -->
+    <title>Teras-Merapi-Home</title>
     <link
       rel="stylesheet"
       href="../../fontawesome-free-6.5.2-web/css/all.min.css"
     />
-    <!-- Menyertakan FontAwesome CSS -->
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="CSS/0-NAVBAR-MENU.css" />
-    <link rel="stylesheet" href="CSS/1-GAMBAR-SLIDER.CSS" />
-    <link rel="stylesheet" href="CSS/2-INFORMASI-CAMPING.CSS" />
-    <link rel="stylesheet" href="CSS/3-PAKET-CAMPING.CSS" />
+    <link rel="stylesheet" href="CSS/1-GAMBAR-GESER.CSS" />
+    <link rel="stylesheet" href="CSS/2-INFORMASI.CSS" />
+    <link rel="stylesheet" href="CSS/3-PAKET.CSS" />
     <link rel="stylesheet" href="CSS/4-GALERY.CSS" />
     <link rel="stylesheet" href="CSS/5-FOOTER.CSS" />
   </head>
   <body>
-    <!-- navbar -->
-    <header class="NAVBAR-MENU">
-      <div class="logo">LOGO</div>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#package">Package</a>
-        <a href="#" class="btn">Reservasi</a>
+    <section class="MENU NAVBAR">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-3"
+        style="background-color: #22303f"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#" style="font-size: 1.5rem">LOGO</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item me-3">
+                <a class="nav-link" href="../1-HOME/index.html">Home</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="../2-ABOUT-US/index.html">About Us</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#">Package</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-outline-primary text-white px-3 reservasi-btn"
+                  href="#"
+                  >Reservasi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </header>
-    <!-- gambar slider -->
-    <section class="GAMBAR-SLIDER">
-      <div class="slider">
-        <div class="list">
-          <div class="item">
-            <img src="GAMBAR/Gunung Merapi.jpg" alt="" />
-            <div class="content">
-              <div class="text">
-                <div class="title">Welcome to Teras Merapi</div>
-                <div class="description">
-                  Loremipsum sdnjncacioqin n ajnajlnnljas snansnnjnn
-                  msjnasnuqnnja kn jnjnononn
+    </section>
+    <section class="GAMBAR-GESER">
+      <div class="container-fluid" style="margin: 0 auto; padding: 0">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="2000"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="d-block w-100"
+                alt="Gunung Merapi"
+              />
+              <div class="carousel-caption">
+                <h1 class="title">Welcome to Teras Merapi</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="button">
+                  <a href="https://www.youtube.com/">Reservasi</a>
                 </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="GAMBAR/GAMBAR PAKET A.webp"
+                class="d-block w-100"
+                alt="GAMBAR PAKET A"
+              />
+              <div class="carousel-caption">
+                <h1 class="title">Paket Glamping A</h1>
+                <p>Harga Rp 750.000</p>
+                <div class="button">
+                  <a href="https://www.youtube.com/">Reservasi</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="GAMBAR/GAMBAR PAKET B.webp"
+                class="d-block w-100"
+                alt="GAMBAR PAKET B"
+              />
+              <div class="carousel-caption">
+                <h1 class="title">Paket Glamping B</h1>
+                <p>Harga Rp 600.000</p>
+                <div class="button">
+                  <a href="https://www.youtube.com/">Reservasi</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="GAMBAR/GAMBAR PAKET PREMIUM.webp"
+                class="d-block w-100"
+                alt="GAMBAR PAKET PREMIUM"
+              />
+              <div class="carousel-caption">
+                <h1 class="title">Paket Premium</h1>
+                <p>Harga mulai dari Rp 250.000 sampai dengan Rp 350.000</p>
+                <div class="button">
+                  <a href="https://www.youtube.com/">Reservasi</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="GAMBAR/GAMBAR PAKET MEDIUM.webp"
+                class="d-block w-100"
+                alt="GAMBAR PAKET MEDIUM"
+              />
+              <div class="carousel-caption">
+                <h1 class="title">Paket Medium</h1>
+                <p>Harga mulai dari Rp 160.000 sampai dengan Rp 260.000</p>
                 <div class="button">
                   <a href="https://www.youtube.com/">Reservasi</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="item">
-            <img src="GAMBAR/GAMBAR PAKET A.webp" alt="Paket Glamping" />
-            <div class="content">
-              <div class="text">
-                <div class="title">Paket Glamping A</div>
-                <div class="description">Harga Rp 750.000</div>
-                <div class="button">
-                  <a href="">Reservasi</a>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="INFORMASI">
+      <div class="text-center shadow-lg p-3 my-5 mx-5 bg-body rounded">
+        <h1 class="judul">Infromasi About Us</h1>
+        <p class="p-5">
+          Teras Merapi adalah destinasi wisata alam yang menyuguhkan pemandangan
+          indah dan eksotis dari Gunung Merapi. Nikmati udara segar dan suasana
+          alam yang asri, sambil mengeksplorasi berbagai aktivitas menarik yang
+          tersedia.
+        </p>
+      </div>
+      <div class="text-center">
+        <iframe
+          class=""
+          width="90%"
+          height="800px"
+          src="https://www.youtube.com/embed/dYnngK7RPz0?si=VPK7OU5mD9XGBqRM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+    <section class="PAKET">
+      <div class="shadow-lg p-3 my-5 mx-5 bg-body rounded">
+        <h1 class="text-center judul">Paket Camping</h1>
+        <div class="header">
+          <h3>Pilih Paket</h3>
+          <div class="button">
+            <a href="https://www.youtube.com/"
+              ><i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <div class="paket-content">
+                <div class="image-box">
+                  <img src="GAMBAR/GAMBAR PAKET A.webp" alt="Paket Glamping" />
+                </div>
+                <div class="content">
+                  <h2>PAKET GLAMPING TERAS MERAPI A</h2>
+                  <h3>clik untuk melihat</h3>
+                  <ul class="list-text">
+                    <li>FREE HTM</li>
+                    <li>Sarapan</li>
+                    <li>Tenda Naturehike V13</li>
+                    <li>Kasur</li>
+                    <li>Bantal dan Selimut</li>
+                    <li>Meja dan Kursi</li>
+                    <li>Rak</li>
+                    <li>Teko Listrik</li>
+                    <li>Lampu Tenda</li>
+                    <li>Paket BBQ</li>
+                  </ul>
+                  <div class="button">
+                    <a href="https://www.youtube.com/">Reservasi</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="item">
-            <img src="GAMBAR/GAMBAR PAKET B.webp" alt="Paket Glamping" />
-            <div class="content">
-              <div class="text">
-                <div class="title">Paket Glamping B</div>
-                <div class="description">Harga Rp 600.000</div>
+          <div class="col">
+            <div class="paket-content">
+              <div class="image-box">
+                <img src="GAMBAR/GAMBAR PAKET B.webp" alt="Paket Glamping" />
+              </div>
+              <div class="content">
+                <h2>PAKET GLAMPING TERAS MERAPI A</h2>
+                <h3>clik untuk melihat</h3>
+                <ul class="list-text">
+                  <li>FREE HTM</li>
+                  <li>Sarapan</li>
+                  <li>Tenda Naturehike V13</li>
+                  <li>Kasur</li>
+                  <li>Bantal dan Selimut</li>
+                  <li>Meja dan Kursi</li>
+                  <li>Rak</li>
+                  <li>Teko Listrik</li>
+                  <li>Lampu Tenda</li>
+                </ul>
                 <div class="button">
-                  <a href="">Reservasi</a>
+                  <a href="https://www.youtube.com/">Reservasi</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="item">
-            <img src="GAMBAR/GAMBAR PAKET PREMIUM.webp" alt="paket premium" />
-            <div class="content">
-              <div class="text">
-                <div class="title">paket premium</div>
-                <div class="description">
-                  Harga mulai dari RP 250.000 sampai dengan Rp 350.000
+          <div class="col">
+            <div class="card">
+              <div class="paket-content">
+                <div class="image-box">
+                  <img
+                    src="GAMBAR/GAMBAR PAKET PREMIUM.webp"
+                    alt="Paket premium"
+                  />
                 </div>
-                <div class="button">
-                  <a href="">Reservasi</a>
+                <div class="content">
+                  <h2>PAKET PREMIUM TERAS MERAPI</h2>
+                  <h3>clik untuk melihat</h3>
+                  <ul class="list-text">
+                    <li>FREE HTM</li>
+                    <li>Sarapan Pagi</li>
+                    <li>Fasilitas Wisata</li>
+                    <li>Tenda Dome</li>
+                    <li>Matras</li>
+                    <li>Sleeping Bag</li>
+                    <li>Lampu Tenda</li>
+                    <li>Meja dan Kursi</li>
+                    <li>Nasting Set/Grillpan Set</li>
+                  </ul>
+                  <div class="button">
+                    <a href="https://www.youtube.com/">Reservasi</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="item">
-            <img src="GAMBAR/GAMBAR PAKET MEDIUM.webp" alt="Paket Medium" />
-            <div class="content">
-              <div class="text">
-                <div class="title">Paket Medium</div>
-                <div class="description">
-                  Harga mulai dari RP 160.000 sampai dengan Rp 260.000
-                </div>
+          <div class="col">
+            <div class="paket-content">
+              <div class="image-box">
+                <img src="GAMBAR/GAMBAR PAKET MEDIUM.webp" alt="Paket Medium" />
+              </div>
+              <div class="content">
+                <h2>PAKET PAKET MEDIUM TERAS MERAPI</h2>
+                <h3>clik untuk melihat</h3>
+                <ul class="list-text">
+                  <li>FREE HTM</li>
+                  <li>Sarapan Pagi</li>
+                  <li>Fasilitas Wisata</li>
+                  <li>Tenda Dome</li>
+                  <li>Matras</li>
+                  <li>Sleeping Bag</li>
+                </ul>
                 <div class="button">
-                  <a href="">Reservasi</a>
+                  <a href="https://www.youtube.com/">Reservasi</a>
                 </div>
               </div>
             </div>
@@ -104,124 +335,121 @@
         </div>
       </div>
     </section>
-
-    <!-- informasi teras merapi -->
-    <section class="INFORMASI-CAMPING">
-      <div class="informasi">
-        <div class="informasi-content">
-          <h1>Infromasi About Us</h1>
-          <p>
-            Teras Merapi adalah destinasi wisata alam yang menyuguhkan
-            pemandangan indah dan eksotis dari Gunung Merapi. Nikmati udara
-            segar dan suasana alam yang asri, sambil mengeksplorasi berbagai
-            aktivitas menarik yang tersedia.
-          </p>
-        </div>
-      </div>
-      <section id="youtube" class="section-p1">
-        <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dYnngK7RPz0?si=VPK7OU5mD9XGBqRM"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-    </section>
-
-    <!-- paket camping hover -->
-    <section class="PAKET-CAMPING">
-      <h1>Paket Camping</h1>
-      <h3>Pilih Paket</h3>
-      <div class="paket">
-        <div class="paket-content">
-          <div class="image-box">
-            <img src="GAMBAR/GAMBAR PAKET A.webp" alt="Paket Glamping" />
+    <section class="GALERY">
+      <div class="shadow-lg p-3 my-5 mx-5 bg-body rounded">
+        <h1 class="text-center judul">Galeri Kami</h1>
+        <div class="row row-cols-2 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
           </div>
-          <div class="content">
-            <h2>PAKET GLAMPING TERAS MERAPI A</h2>
-            <ul class="list-text">
-              <li>FREE HTM</li>
-              <li>Sarapan</li>
-              <li>Tenda Naturehike V13</li>
-              <li>Kasur</li>
-              <li>Bantal dan Selimut</li>
-              <li>Meja dan Kursi</li>
-              <li>Rak</li>
-              <li>Teko Listrik</li>
-              <li>Lampu Tenda</li>
-              <li>Paket BBQ</li>
-            </ul>
-            <div class="button">
-              <a href="https://www.youtube.com/">Reservasi</a>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-4 border bg-light">
+              <img
+                src="GAMBAR/Gunung Merapi.jpg"
+                class="img-fluid"
+                alt="Gunung Merapi"
+              />
             </div>
           </div>
         </div>
-        <div class="paket-content">
-          <div class="image-box">
-            <img src="GAMBAR/GAMBAR PAKET B.webp" alt="Paket Glamping" />
-          </div>
-          <div class="content">
-            <h2>PAKET GLAMPING TERAS MERAPI A</h2>
-            <ul class="list-text">
-              <li>FREE HTM</li>
-              <li>Sarapan</li>
-              <li>Tenda Naturehike V13</li>
-              <li>Kasur</li>
-              <li>Bantal dan Selimut</li>
-              <li>Meja dan Kursi</li>
-              <li>Rak</li>
-              <li>Teko Listrik</li>
-              <li>Lampu Tenda</li>
-            </ul>
-          </div>
-        </div>
-        <div class="paket-content">
-          <div class="image-box">
-            <img src="GAMBAR/GAMBAR PAKET PREMIUM.webp" alt="Paket premium" />
-          </div>
-          <div class="content">
-            <h2>PAKET PREMIUM TERAS MERAPI</h2>
-            <ul class="list-text">
-              <li>FREE HTM</li>
-              <li>Sarapan Pagi</li>
-              <li>Fasilitas Wisata</li>
-              <li>Tenda Dome</li>
-              <li>Matras</li>
-              <li>Sleeping Bag</li>
-              <li>Lampu Tenda</li>
-              <li>Meja dan Kursi</li>
-              <li>Nasting Set/Grillpan Set</li>
-            </ul>
-          </div>
-        </div>
-        <div class="paket-content">
-          <div class="image-box">
-            <img src="GAMBAR/GAMBAR PAKET MEDIUM.webp" alt="Paket Medium" />
-          </div>
-          <div class="content">
-            <h2>PAKET PAKET MEDIUM TERAS MERAPI</h2>
-            <ul class="list-text">
-              <li>FREE HTM</li>
-              <li>Sarapan Pagi</li>
-              <li>Fasilitas Wisata</li>
-              <li>Tenda Dome</li>
-              <li>Matras</li>
-              <li>Sleeping Bag</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
-
-    <!-- galery -->
-    <section class="GALERY"></section>
-
     <footer class="FOOTER">
       <div class="kotak">
         <img
@@ -263,12 +491,12 @@
         <p>✉️ Terasmerapi@gmail.com</p>
         <p>🏠 Jln Kaliurang, Teras Merapi 827 Sleman, Yogyakarta</p>
       </div>
-      <div class="kotak">
-        <p>© 2024, Kelompok 1 - Desain Web & Praktik</p>
-      </div>
       <!-- <div class="kotak"></div> -->
     </footer>
-
-    <script src="JS/script.js"></script>
+    <div class="copyright">
+      <p>© 2022 All Rights Reserved by Kelompok 1.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

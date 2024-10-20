@@ -1,8 +1,10 @@
 /* Definisi warna yang digunakan */
 :root {
     /* Variabel warna */
+    --warna: white;
+    /* Warna */
     --warna0: black;
-    /* Warna text */
+    /* Warna  */
     --warna1: #22303F;
     /* Warna latar belakang */
     --warna2: #E7E8E7;
@@ -13,78 +15,10 @@
     /* Warna button latar belakang */
     --warna5: #394A56;
     /* Warna hover button latar belakang  */
-    --warna6: white;
-    /* Warna hover button latar belakang  */
-}
 
-.PAKET-CAMPING {
-    padding: 50px 0;
-    /* Mengatur padding */
-    max-width: 100vw;
-    /* Mengatur lebar maksimum 100% dari viewport */
-    height: auto;
-    /* Atur tinggi otomatis atau sesuai dengan konten */
-    background-color: var(--warna6);
-    /* Warna latar belakang */
-}
-
-.PAKET-CAMPING h1 {
-    font-size: 2.5em;
-    /* Ukuran font lebih besar untuk judul */
-    font-weight: bold;
-    /* Ketebalan font lebih tebal untuk judul */
-    color: var(--warna0);
-    /* Warna teks */
-    text-align: center;
-    /* Pusatkan teks secara horizontal */
-}
-
-.PAKET-CAMPING h3 {
-    margin: 20px 0;
-    padding-left: 200px;
-    font-size: 1.5em;
-    /* Ukuran font lebih besar untuk judul */
-    font-weight: bold;
-    /* Ketebalan font lebih tebal untuk judul */
-    color: var(--warna0);
-    /* Warna teks */
-}
-
-/* Bagian Paket Hover */
-.paket {
-    margin: -30px auto;
-    /* Mengatur margin otomatis */
-    padding: 70px;
-    /* Mengatur padding */
-    height: auto;
-    /* Mengatur tinggi otomatis atau sesuai dengan konten */
-    width: 80vw;
-    /* Mengatur lebar 80% dari viewport */
-    display: grid;
-    /* Menggunakan grid untuk tata letak */
-    grid-template-columns: repeat(2, 1fr);
-    /* Dua kolom dengan lebar 1fr */
-    grid-template-rows: repeat(2, 1fr);
-    /* Dua baris dengan tinggi 1fr */
-    gap: 30px;
-    /* Jarak antar item */
-    justify-content: center;
-    /* Pusatkan konten secara horizontal */
-    align-items: center;
-    /* Pusatkan konten secara vertikal */
-    color: var(--warna2);
-    /* Warna teks */
 }
 
 .paket-content {
-    width: 100%;
-    /* Lebar 100% dari konten */
-    max-width: 30rem;
-    /* Lebar maksimum */
-    aspect-ratio: 1 / 0.7;
-    /* Rasio lebar ke tinggi */
-    border-radius: 1.5rem;
-    /* Sudut melengkung */
     position: relative;
     /* Posisi relatif untuk konten */
     cursor: pointer;
@@ -93,15 +27,30 @@
     /* Menyembunyikan konten yang melampaui batas */
 }
 
-.paket-content .image-box {
-    width: 100%;
-    /* Lebar 100% dari konten */
-    height: 100%;
-    /* Tinggi 100% dari konten */
-    border-radius: inherit;
-    /* Sudut melengkung */
-    overflow: hidden;
-    /* Menyembunyikan konten yang melampaui batas */
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* Memisahkan h3 dan tombol */
+    align-items: center;
+    /* Memusatkan vertikal */
+    margin-bottom: 20px;
+    /* Jarak bawah untuk pemisahan dari konten berikutnya */
+}
+
+
+.header .button a {
+    padding: 10px 20px;
+    /*padding*/
+    background-color: var(--warna4);
+    /* Warna latar belakang tombol */
+    cursor: pointer;
+    /* Ubah kursor menjadi pointer saat dihover */
+    border-radius: 0.5rem;
+    color: var(--warna2);
+    /* Warna teks */
+    text-decoration: none;
+    /* Hapus garis bawah */
+
 }
 
 .paket-content .image-box img {
@@ -111,12 +60,6 @@
     /* Tinggi 100% dari konten */
     object-fit: cover;
     /* Menutupi seluruh area item tanpa mengubah rasio */
-    object-position: 50% 90%;
-    /* Posisi gambar */
-    border-radius: inherit;
-    /* Sudut melengkung */
-    transition: 0.5s ease-in-out;
-    /* Efek transisi */
 }
 
 .paket-content::after {
@@ -128,7 +71,7 @@
     /* Menetapkan semua sisi (atas, kanan, bawah, kiri) ke 0 */
     border: 2px solid white;
     /* Garis putih */
-    border-radius: inherit;
+    border-radius: 1.5rem;
     /* Sudut melengkung */
     opacity: 0;
     /* Opasitas awal 0 */
@@ -144,13 +87,13 @@
 .paket-content:hover::after {
     opacity: 1;
     /* Opasitas 1 saat dihover */
-    inset: 20px;
+    inset: 2%;
     /* Jarak antar border */
 }
 
 /* Bagian konten yang muncul saat hover */
 .paket-content .content {
-    width: 80%;
+    width: 70%;
     /* Lebar 80% dari konten */
     position: absolute;
     /* Posisi absolut */
@@ -167,42 +110,44 @@
 }
 
 .paket-content .content h2 {
-    font-size: 1rem;
-    /* Ukuran font */
-    margin-bottom: 12px;
-    /* Margin bawah */
+    background: rgba(0,
+            0,
+            0,
+            0.5);
+    /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(5px);
+    /* Efek blur pada latar belakang */
+    border-radius: 0.5rem;
+    /* Sudut melengkung */
     opacity: 1;
     /* Opasitas awal 1 */
     transition: 0.3s ease-in-out;
     /* Efek transisi */
+    color: var(--warna2);
 }
 
-.paket-content .content p {
-    font-size: 14px;
-    /* Ukuran font */
-    line-height: 1.5;
-    /* Jarak antar baris */
-    color: var(--warna2);
+.paket-content .content h3 {
+    color: var(--warna0);
     /* Warna teks */
     transition: 0.3s ease-in-out;
     /* Efek transisi */
+    opacity: 1;
+    /* Opasitas awal 1 */
+    backdrop-filter: blur(5px);
+    /* Efek blur pada latar belakang */
+    border-radius: 5rem;
+    /* Sudut melengkung */
 }
 
 /* Daftar fasilitas (ul) yang akan muncul saat hover */
 .paket-content .content ul {
-    /* Mengatur ul sebagai daftar */
-    margin: 0;
-    /* Margin atas dan bawah 0 */
-    padding: 0;
-    /* Padding atas dan bawah 0 */
-    font-size: 14px;
-    /* Ukuran font */
+    margin-top: -50px;
+    /* Jarak atas */
     color: var(--warna2);
     /* Warna teks */
     opacity: 0;
     /* Opasitas awal 0 */
     max-height: 0;
-    /* Tinggi maksimum 0 */
     /* Pada awalnya disembunyikan */
     overflow: hidden;
     /* Menyembunyikan konten yang melampaui batas */
@@ -210,6 +155,7 @@
     /* Efek transisi */
     text-align: left;
     /* Pusatkan teks secara horizontal */
+
 }
 
 /* Hover state untuk menampilkan ul */
@@ -218,7 +164,6 @@
     /* Opasitas 1 saat dihover */
     max-height: 500px;
     /* Tinggi maksimum 500px */
-    /* Maksimalkan tinggi untuk menampilkan seluruh daftar */
 }
 
 .paket-content:hover .content h2 {
@@ -228,7 +173,10 @@
     /* Opasitas 1 saat dihover */
 }
 
-.paket-content:hover .content p,
+.paket-content:hover .content h3 {
+    opacity: 0;
+}
+
 .paket-content:hover .content h1 {
     opacity: 1;
     /* Opasitas 1 saat dihover */
@@ -240,8 +188,10 @@
 .paket-content .content .button {
     margin-top: -10px;
     /* Jarak atas */
-    text-align: center;
-    /* Pusatkan teks */
+    justify-content: center;
+    /* Pusatkan secara horizontal */
+    align-items: center;
+    /* Pusatkan secara vertikal */
     opacity: 0;
     /* Tombol awalnya tidak terlihat */
     transition: 0.5s ease-in-out;
@@ -254,31 +204,34 @@
 
 /* Atur gaya tombol */
 .paket-content .content .button a {
-    padding: 10px;
+    padding: 10px 20px;
+    /* Tambahkan padding untuk memberi lebih banyak ruang pada tombol */
     border: none;
-    /* Menghilangkan border tombol */
+    /* Hapus border */
     background-color: var(--warna4);
     /* Warna latar belakang tombol */
     font-weight: 500;
-    /* Ketebalan font tombol */
+    /* Ketebalan font */
     cursor: pointer;
-    /* Kursor berubah menjadi pointer saat dihover */
+    /* Ubah kursor menjadi pointer saat dihover */
     transition: 0.5s;
-    /* Transisi untuk efek hover */
+    /* Efek transisi saat dihover */
     letter-spacing: 2px;
     /* Jarak antar huruf */
     border-radius: 0.5rem;
     /* Membuat sudut  */
     color: var(--warna2);
-    /* Warna teks  */
+    /* Warna teks */
     font-size: 1rem;
     /* Ukuran font */
     font-weight: bold;
     /* Ketebalan font */
     text-align: center;
-    /* Pusatkan teks secara horizontal */
+    /* Pusatkan teks */
     text-decoration: none;
-    /* Menghilangkan garis bawah */
+    /* Hapus garis bawah */
+    display: inline-block;
+    /* Pastikan tombol berfungsi sebagai elemen inline */
 }
 
 /* Efek hover untuk tombol */

@@ -141,6 +141,12 @@
 
 /* Daftar fasilitas (ul) yang akan muncul saat hover */
 .paket-content .content ul {
+    display: grid;
+    /* Ubah ul menjadi grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Atur grid dengan 3 kolom */
+    gap: 10px;
+    /* Tambahkan jarak antar item */
     margin-top: -50px;
     /* Jarak atas */
     color: var(--warna2);
@@ -154,16 +160,32 @@
     transition: opacity 0.5s ease, max-height 0.5s ease;
     /* Efek transisi */
     text-align: left;
-    /* Pusatkan teks secara horizontal */
+    /* Rata kiri untuk teks */
+    padding: 0;
+    /* Hilangkan padding default */
+    list-style: none;
+    /* Hilangkan bullet pada list */
+    font-size: calc(10px + 1vw);
+    /* Ukuran font dinamis, 10px + 1% dari lebar viewport */
+}
 
+.paket-content .content ul li {
+    padding: 5px;
+    /* Jarak dalam pada tiap item */
+    background-color: var(--warna)
+        /* Tambahkan warna latar belakang transparan */
+        border-radius: 5px;
+    /* Tambahkan sedikit lengkungan pada sudut */
+    text-align: center;
+    /* Pusatkan teks di setiap item */
 }
 
 /* Hover state untuk menampilkan ul */
 .paket-content:hover .content ul {
     opacity: 1;
-    /* Opasitas 1 saat dihover */
+    /* Tampilkan ul saat hover */
     max-height: 500px;
-    /* Tinggi maksimum 500px */
+    /* Atur tinggi maksimum */
 }
 
 .paket-content:hover .content h2 {

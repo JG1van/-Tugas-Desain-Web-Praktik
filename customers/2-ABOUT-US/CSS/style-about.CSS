@@ -18,6 +18,87 @@
 
 }
 
+.reservasi-btn {
+    border: 2px solid white;
+    color: var(--warna);
+    /* Pastikan warna teks default putih */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reservasi-btn:hover {
+    background-color: var(--warna0);
+    color: black !important;
+    /* Tambahkan !important agar warna teks menjadi hitam saat hover */
+    border: 2px solid white;
+}
+
+.contact-card {
+    background-color: #22303f;
+    /* Warna background sesuai gambar */
+    color: var(--warna);
+    border: 3px solid white;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    min-height: 200px;
+    /* Atur tinggi minimum untuk card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+}
+
+.contact-card h4 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-card p {
+    margin: 0;
+}
+
+.contact-card i {
+    font-size: 36px;
+}
+
+.hero {
+    background-image: url("../GAMBAR/bg\ 2.avif");
+    /* Ganti URL gambar sesuai keinginan */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    color: var(--warna0);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.copyright {
+    background-color: white;
+    /* Background putih */
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+    color: black;
+    /* Teks hitam */
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("../GAMBAR/custom.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2.text-center {
+    font-family: "CustomFont", sans-serif;
+}
 
 
 .FOOTER {

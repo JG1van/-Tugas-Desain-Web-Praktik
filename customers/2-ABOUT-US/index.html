@@ -12,89 +12,8 @@
       rel="stylesheet"
       href="../../fontawesome-free-6.5.2-web/css/all.min.css"
     />
-    <link rel="stylesheet" href="CSS/5-FOOTER.CSS" />
-    <style>
-      .reservasi-btn {
-        border: 2px solid white;
-        color: white; /* Pastikan warna teks default putih */
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      .reservasi-btn:hover {
-        background-color: white;
-        color: black !important; /* Tambahkan !important agar warna teks menjadi hitam saat hover */
-        border: 2px solid white;
-      }
-      .contact-card {
-        background-color: #22303f;
-        /* Warna background sesuai gambar */
-        color: white;
-        border: 3px solid white;
-        padding: 20px;
-        text-align: center;
-        margin: 10px;
-        min-height: 200px;
-        /* Atur tinggi minimum untuk card */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* Center content vertically */
-      }
-
-      .contact-card h4 {
-        margin-top: 15px;
-        font-weight: bold;
-      }
-
-      .contact-card p {
-        margin: 0;
-      }
-
-      .contact-card i {
-        font-size: 36px;
-      }
-
-      .hero {
-        background-image: url("GAMBAR/bg\ 2.avif");
-        /* Ganti URL gambar sesuai keinginan */
-        background-size: cover;
-        background-position: center;
-        height: 600px;
-        position: relative;
-        color: white;
-      }
-
-      .hero-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      .copyright {
-        background-color: white;
-        /* Background putih */
-        text-align: center;
-        margin-top: 0;
-        padding: 10px;
-        color: black;
-        /* Teks hitam */
-      }
-
-      @font-face {
-        font-family: "CustomFont";
-        src: url("GAMBAR/custom.otf") format("opentype");
-        font-weight: normal;
-        font-style: normal;
-      }
-
-      h2.text-center {
-        font-family: "CustomFont", sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="CSS/style-about.CSS" />
   </head>
-
   <body style="background-color: #ffffff">
     <!-- Navbar -->
     <nav
@@ -259,52 +178,46 @@
     </div>
 
     <!-- Footer -->
-    <
     <footer class="FOOTER">
-      <div class="kotak">
-        <img
-          src="GAMBAR/Gunung Merapi.jpg"
-          width="100"
-          height="100"
-          class="Logo"
-          alt=""
-        />
-        <h4>Teras Merapi</h4>
-        <p class="Teras-Merapi">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae
-          hic doloribus, repellendus veniam rerum unde dicta ex voluptatem
-          incidunt ad minima possimus sed cumque ipsa itaque dolorem odit nihil?
-          Totam repellendus fugiat sed voluptatem nobis eum excepturi. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Repellat ex
-          obcaecati ipsam aliquam, pariatur animi tenetur suscipit, officiis
-          provident fugit unde ad harum quasi facere saepe asperiores. Ut, unde
-          dolor!
-        </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Teras Merapi</h3>
+            <p>
+              Duis cursus, mi quis viverra ornare, eros dolor interdum nulla
+              utimp erdiet commodo diam libero vitae nibh et jus cursus id
+              rutrum lore imperdiet ut sem vitae risus tristique posuere
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook icon"></i></a>
+              <a href="#"><i class="fab fa-instagram icon"></i></a>
+              <a href="#"><i class="fab fa-tiktok icon"></i></a>
+              <a href="#"><i class="fab fa-whatsapp icon"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h3>Quick Link</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Paket</a></li>
+              <li><a href="#">Reservasi</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Us</h3>
+            <p><i class="bi bi-telephone"></i> +628180289912</p>
+            <p><i class="bi bi-envelope"></i> Terasmerapi@gmail.com</p>
+            <p>
+              <i class="bi bi-geo-alt"></i> Jln.Kaliurang, Teras merapi no.12
+              Sleman, Yogyakarta
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="kotak folow">
-        <h4>Follow Us</h4>
-        <a href="" class="fab fa-facebook icon"></a>
-        <a href="" class="fab fa-instagram icon"> </a>
-        <a href="" class="fab fa-tiktok icon"></a>
-      </div>
-
-      <div class="kotak">
-        <h4>Quick Links</h4>
-        <p><a href="#home">Home</a></p>
-        <p><a href="#about">About Us</a></p>
-        <p><a href="#package">Package</a></p>
-        <p><a href="#" class="btn">Reservasi</a></p>
-      </div>
-      <div class="kotak">
-        <h4>Contact Us</h4>
-        <p>📞 +628180289912</p>
-        <p>✉️ Terasmerapi@gmail.com</p>
-        <p>🏠 Jln Kaliurang, Teras Merapi 827 Sleman, Yogyakarta</p>
-      </div>
-      <!-- <div class="kotak"></div> -->
     </footer>
     <div class="copyright">
-      <p>© 2022 All Rights Reserved by Kelompok 1.</p>
+      <p>© 2024, Kelompok 1 - Desain Web & Praktik</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>

@@ -124,6 +124,8 @@
     transition: 0.3s ease-in-out;
     /* Efek transisi */
     color: var(--warna2);
+    font-size: calc(20px + 0.5vw);
+    /* Ukuran font dinamis, 10px + 1% dari lebar viewport */
 }
 
 .paket-content .content h3 {
@@ -145,7 +147,7 @@
     /* Ubah ul menjadi grid */
     grid-template-columns: repeat(3, 1fr);
     /* Atur grid dengan 3 kolom */
-    gap: 10px;
+    gap: 5px;
     /* Tambahkan jarak antar item */
     margin-top: -50px;
     /* Jarak atas */
@@ -170,12 +172,8 @@
 }
 
 .paket-content .content ul li {
-    padding: 5px;
+    padding: 2.5px;
     /* Jarak dalam pada tiap item */
-    background-color: var(--warna)
-        /* Tambahkan warna latar belakang transparan */
-        border-radius: 5px;
-    /* Tambahkan sedikit lengkungan pada sudut */
     text-align: center;
     /* Pusatkan teks di setiap item */
 }
@@ -286,4 +284,31 @@
 .paket-content:hover::after {
     pointer-events: none;
     /* Pastikan border tidak mengganggu klik */
+}
+
+.circle {
+    width: 10vw;
+    /* Ukuran dinamis, tergantung viewport */
+    height: 10vw;
+    /* Tinggi disesuaikan dengan lebar untuk mempertahankan bentuk lingkaran */
+    border-radius: 50%;
+    /* Membuatnya berbentuk lingkaran */
+    display: flex;
+    /* Menggunakan flexbox */
+    align-items: center;
+    /* Pusatkan secara vertikal */
+    justify-content: center;
+    /* Pusatkan secara horizontal */
+    margin: 0 auto;
+    /* Memusatkan elemen dalam kontainer */
+}
+
+.circle i {
+    font-size: calc(10vw + 10px);
+    /* Ukuran font dinamis, bisa disesuaikan */
+}
+
+.fasilitas-text {
+    color: var(--warna0);
+    /* Gunakan variabel warna jika diperlukan */
 }

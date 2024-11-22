@@ -118,7 +118,8 @@ h2.text-center {
     /* Transisi halus untuk perubahan posisi gambar */
     color: var(--warna2);
     /* Warna teks */
-    background-position: center;
+    background-position: center bottom;
+    /* Mengatur posisi gambar latar belakang */
 }
 
 .FOOTER:hover {

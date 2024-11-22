@@ -1,0 +1,78 @@
+:root {
+    /* Variabel warna */
+    --warna: white;
+    /* Warna */
+    --warna0: black;
+    /* Warna  */
+    --warna1: #22303f;
+    /* Warna latar belakang */
+    --warna2: #e7e8e7;
+    /* Warna text 1 */
+    --warna3: #8fbfda;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394a56;
+    /* Warna hover button latar belakang  */
+}
+
+.PACKAGE .card {
+    border: 5px solid var(--warna0);
+    /* Warna border */
+    min-height: 350px;
+    /* Tinggi maksimal */
+    max-height: 530px;
+    /* Tinggi maksimal */
+    width: 80%;
+    /* Lebar kartu relatif terhadap container */
+    margin: auto;
+    /* Center kartu di tengah */
+}
+
+.PACKAGE .card-header,
+.PACKAGE .card-footer {
+    font-weight: bold;
+    /* Tebal font */
+    background-color: var(--warna);
+}
+
+.card-body ul {
+    padding-left: 20px;
+    /* Jarak antara item */
+}
+
+/* Atur gaya tombol */
+.PACKAGE .button a {
+    font-weight: bold;
+    /* Ketebalan font */
+    text-align: center;
+    /* Pusatkan teks */
+    text-decoration: none;
+    /* Hapus garis bawah */
+    display: inline-block;
+    /* Pastikan tombol berfungsi sebagai elemen inline */
+    color: var(--warna2);
+    /* Warna teks */
+    font-size: 1rem;
+    /* Ukuran font */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 10px;
+    /* Sudut melengkung */
+    border: 2px solid #3866A3;
+    /* Garis tepi */
+    background-color: var(--warna4);/
+    /* Warna latar belakang tombol */
+    transition: 10s ease-in-out;
+    /* Efek transisi saat dihover */
+}
+
+/* Efek hover untuk tombol */
+.PACKAGE .button a:hover {
+    background: var(--warna4);
+    /* Warna latar belakang saat di-hover */
+    background: linear-gradient(to top, var(--warna3), var(--warna4));
+    /* Warna latar belakang saat di-hover */
+    box-shadow: 1px 1px 10px #FFFFFF;
+    /*Warna bayangan*/
+}

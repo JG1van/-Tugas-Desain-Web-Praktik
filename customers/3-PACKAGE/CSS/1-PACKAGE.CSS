@@ -19,11 +19,11 @@
 .PACKAGE .card {
     border: 5px solid var(--warna0);
     /* Warna border */
-    min-height: 360px;
+    min-height: 300px;
     /* Tinggi maksimal */
-    max-height: 540px;
+    max-height: 600px;
     /* Tinggi maksimal */
-    width: 80%;
+    width: 85%;
     /* Lebar kartu relatif terhadap container */
     margin: auto;
     /* Center kartu di tengah */

@@ -19,9 +19,9 @@
 .PACKAGE .card {
     border: 5px solid var(--warna0);
     /* Warna border */
-    min-height: 350px;
+    min-height: 360px;
     /* Tinggi maksimal */
-    max-height: 530px;
+    max-height: 540px;
     /* Tinggi maksimal */
     width: 80%;
     /* Lebar kartu relatif terhadap container */

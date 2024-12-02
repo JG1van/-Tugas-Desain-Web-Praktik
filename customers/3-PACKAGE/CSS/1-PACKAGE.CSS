@@ -24,6 +24,7 @@
     max-height: 600px;
     /* Tinggi maksimal */
     width: 85%;
+    max-width: 300px;
     /* Lebar kartu relatif terhadap container */
     margin: auto;
     /* Center kartu di tengah */
@@ -34,14 +35,30 @@
     font-weight: bold;
     /* Tebal font */
     background-color: var(--warna);
+    /* Warna latar belakang */
+    padding: 15px;
+    /* Padding */
+    border: none;
 }
 
 .card-body ul {
     padding-left: 20px;
-    /* Jarak antara item */
+    list-style-type: none;
 }
 
-/* Atur gaya tombol */
+.card-body ul li {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    text-indent: -20px;
+    position: relative;
+}
+
+.card-body ul li:before {
+    content: "✔";
+    color: var(--warna4);
+    margin-right: 10px;
+}
+
 .PACKAGE .button a {
     font-weight: bold;
     /* Ketebalan font */
@@ -59,7 +76,7 @@
     /* Padding */
     border-radius: 10px;
     /* Sudut melengkung */
-    border: 2px solid #3866A3;
+    border: 2px solid var(--warna4);
     /* Garis tepi */
     background-color: var(--warna4);/
     /* Warna latar belakang tombol */
@@ -67,12 +84,71 @@
     /* Efek transisi saat dihover */
 }
 
-/* Efek hover untuk tombol */
 .PACKAGE .button a:hover {
-    background: var(--warna4);
-    /* Warna latar belakang saat di-hover */
     background: linear-gradient(to top, var(--warna3), var(--warna4));
     /* Warna latar belakang saat di-hover */
     box-shadow: 1px 1px 10px #FFFFFF;
     /*Warna bayangan*/
+}
+
+.etiquet-price {
+    position: absolute;
+    /* Ubah posisi menjadi absolute */
+    top: 80px;
+    /* Jarak dari atas */
+    right: -28px;
+    /* Letakkan di sisi kanan */
+    background: var(--warna4);
+    /* Warna latar belakang */
+    width: 60%;
+    /* Lebar */
+    padding: 0.2rem 1.2rem;
+    /* Padding */
+    border-radius: 5px 0px 0px 5px;
+    /* Sudut kanan melengkung */
+    z-index: 10;
+    /* Supaya tampil di atas elemen lainnya */
+    color: var(--warna);
+    /* Warna teks */
+}
+
+.etiquet-price p {
+    margin: 0;
+    padding-top: 0.4rem;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.etiquet-price p:before {
+    content: "Rp";
+    margin-right: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.etiquet-price p:after {
+    content: "/ Malam";
+    margin-left: 5px;
+    font-size: 0.5rem;
+    font-weight: 300;
+}
+
+.etiquet-price div {
+    position: absolute;
+    bottom: -34.5px;
+    /* Jarak dari label */
+    right: -0.1px;
+    /* Tetap di sisi kiri */
+    width: 0;
+    height: 0;
+    border-top: 20px solid #8fbfda;
+    /* Tinggi segitiga */
+    border-bottom: 15px solid transparent;
+    /* Lebar sisi bawah */
+    border-right: 25px solid transparent;
+    /* Lebar sisi kiri */
+    z-index: -1;
+    /* Agar tidak menutupi elemen lainnya */
 }

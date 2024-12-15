@@ -68,7 +68,7 @@
     /* Ganti URL gambar sesuai keinginan */
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: 800px;
     position: relative;
     color: var(--warna);
     display: flex;
@@ -81,15 +81,12 @@
 .hero-text {
     position: relative;
     z-index: 2;
-    /* Pastikan teks berada di atas efek blur */
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
-    /* Latar belakang teks dengan transparansi */
     border-radius: 15px;
     text-align: center;
     color: var(--warna);
     max-width: 90%;
-    /* Atur lebar maksimal teks */
 }
 
 .judul {
@@ -101,8 +98,8 @@
 
 .hero-text .text {
     margin: 0;
-    padding: 15px;
-    font-size: 1rem;
+    padding: 10px;
+    font-size: 2vw;
     color: var(--warna2);
 }
 

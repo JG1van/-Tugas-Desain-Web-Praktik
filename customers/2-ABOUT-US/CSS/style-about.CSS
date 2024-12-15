@@ -68,7 +68,7 @@
     /* Ganti URL gambar sesuai keinginan */
     background-size: cover;
     background-position: center;
-    height: 800px;
+    height: 600px;
     position: relative;
     color: var(--warna);
     display: flex;

@@ -64,8 +64,7 @@
 }
 
 .hero {
-    background-image: url("../GAMBAR/bg\ 2.avif");
-    /* Ganti URL gambar sesuai keinginan */
+    background-image: url("../GAMBAR/About Us1.JPG");
     background-size: cover;
     background-position: center;
     height: 600px;

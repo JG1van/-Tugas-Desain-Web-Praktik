@@ -21,14 +21,14 @@
 
 
 .reservasi-btn {
-    border: 2px solid white;
-    color: var(--warna);
+    border: 2px solid var(--warna);
+    color: white;
     /* Pastikan warna teks default putih */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .reservasi-btn:hover {
-    background-color: var(--warna0);
+    background-color: var(--warna);
     color: black !important;
     /* Tambahkan !important agar warna teks menjadi hitam saat hover */
     border: 2px solid white;

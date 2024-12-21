@@ -51,7 +51,7 @@
     /* Warna latar belakang tombol */
     cursor: pointer;
     /* Ubah kursor menjadi pointer saat dihover */
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     color: var(--warna2);
     /* Warna teks */
     text-decoration: none;

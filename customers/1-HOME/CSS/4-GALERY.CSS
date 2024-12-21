@@ -31,7 +31,7 @@
 }
 
 .GALERY .card:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     /* Memperbesar ukuran kartu saat hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     /* Memberikan efek bayangan pada kartu */

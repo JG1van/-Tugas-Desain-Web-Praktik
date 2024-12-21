@@ -119,7 +119,7 @@
     transition: 0.3s ease-in-out;
     /* Efek transisi */
     color: var(--warna2);
-    font-size: calc(10px + 1.5vw);
+    font-size: calc(10px + 1vw);
     /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
     text-align: center;
     margin: 10px 40px;
@@ -184,7 +184,7 @@
     /* Pastikan semua elemen terlihat */
     opacity: 0;
     /* Tampilkan elemen */
-    font-size: calc(4px + 0.5vw);
+    font-size: calc(4px + 0.2vw);
     /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
     text-align: left;
     /* Pusatkan teks secara horizontal */
@@ -222,7 +222,7 @@
 .paket-content:hover .content ul {
     opacity: 1;
     /* Tampilkan daftar */
-    max-height: 90px;
+    max-height: 100px;
     /* Tinggi maksimum */
     overflow-y: auto;
     /* Scroll jika melebihi tinggi */
@@ -279,6 +279,8 @@
     /* Memastikan tombol di atas elemen lainnya */
 }
 
+
+
 /* Atur gaya tombol */
 .PAKET .button a {
     font-weight: bold;
@@ -291,7 +293,7 @@
     /* Pastikan tombol berfungsi sebagai elemen inline */
     color: var(--warna2);
     /* Warna teks */
-    font-size: 1rem;
+    font-size: 0.5rem;
     /* Ukuran font */
     padding: 10px 20px;
     /* Padding */

@@ -19,7 +19,6 @@
 }
 
 .card {
-    max-height: 350px;
     border-radius: 0.5rem;
     overflow: hidden;
 }
@@ -61,15 +60,15 @@
 
 .paket-content .image-box img {
     width: 100%;
-    /* Lebar 100% dari konten */
-    height: 100%;
-    /* Tinggi 100% dari konten */
+    /* Lebar penuh dari container */
+    height: 300px;
+    /* Tinggi tetap */
     object-fit: cover;
-    /* Menutupi seluruh area item tanpa mengubah rasio */
+    /* Memastikan gambar terpotong tanpa merusak proporsi */
     border-radius: 0.5rem;
     /* Sudut melengkung */
-
 }
+
 
 .paket-content::after {
     content: "";
@@ -309,12 +308,9 @@
 
 /* Efek hover untuk tombol */
 .PAKET .button a:hover {
-    background: var(--warna4);
+    background: var(--warna2);
     /* Warna latar belakang saat di-hover */
-    background: linear-gradient(to top, var(--warna3), var(--warna4));
-    /* Warna latar belakang saat di-hover */
-    box-shadow: 1px 1px 10px #FFFFFF;
-    /*Warna bayangan*/
+    color: var(--warna0);
 }
 
 
@@ -375,9 +371,7 @@
 .circle:hover {
     background: var(--warna4);
     /* Warna latar belakang saat di-hover */
-    background: linear-gradient(to top, var(--warna3), var(--warna4));
-    /* Warna latar belakang saat di-hover */
-    color: white;
+    color: var(--warna0);
 }
 
 /* Ukuran ikon */

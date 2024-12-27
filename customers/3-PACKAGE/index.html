@@ -610,6 +610,15 @@
               </div>
 
               <div class="mb-3">
+                <label for="paymentMethod" class="form-label">Metode Pembayaran</label>
+                <select class="form-select" id="paymentMethod" required>
+                  <option value="" disabled selected>Pilih metode pembayaran...</option>
+                  <option value="cash">Transfer Bank</option>
+                  <option value="e-wallet">E-wallet</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
                 <label for="notes" class="form-label">Catatan</label>
                 <textarea
                   class="form-control"

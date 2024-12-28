@@ -216,7 +216,8 @@
               <div class="feature-icon">
                 <i class="fas fa-home"></i>
               </div>
-              <h3 class="feature-title">Fasilitas Lengkap</h3> <br>
+              <h3 class="feature-title">Fasilitas Lengkap</h3>
+              <br />
               <p class="feature-description">
                 "Dilengkapi dengan fasilitas modern yang nyaman, cocok untuk
                 keluarga maupun pasangan."
@@ -231,7 +232,7 @@
                 <i class="fas fa-road"></i>
               </div>
               <h3 class="feature-title">Akses Mudah</h3>
-              <br>
+              <br />
               <p class="feature-description">
                 "Lokasi strategis yang mudah dijangkau dari pusat kota, dengan
                 akses transportasi yang lancar."
@@ -300,7 +301,7 @@
                   yang mewah termasuk seperti tenda, Paket BBQ, sarapan,
                   matras(kasur), banta-guling, lampu tenda dan Rak"
                 </p>
-                
+
                 <a href="../3-PACKAGE/index.html#glamping" class="view-btn"
                   >Lihat</a
                 >
@@ -323,8 +324,8 @@
                   cukup lengkap seperti tenda, matras, sleeping bag, dan
                   sarapan."
                 </p>
-                <br>
-                
+                <br />
+
                 <a
                   href="../3-PACKAGE/index.html#camping-medium
 "
@@ -850,6 +851,19 @@
               </div>
 
               <div class="mb-3">
+                <label for="paymentMethod" class="form-label"
+                  >Metode Pembayaran</label
+                >
+                <select class="form-select" id="paymentMethod" required>
+                  <option value="" disabled selected>
+                    Pilih metode pembayaran...
+                  </option>
+                  <option value="cash">Transfer Bank</option>
+                  <option value="e-wallet">E-wallet</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
                 <label for="notes" class="form-label">Catatan</label>
                 <textarea
                   class="form-control"
@@ -937,7 +951,7 @@
           // Event listener untuk tombol "Oke"
           document.getElementById("confirmButton").onclick = function () {
             confirmationModal.hide();
-            window.location.href = "about.html";
+            window.location.href = "index.html";
           };
         });
     </script>
